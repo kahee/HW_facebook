@@ -71,7 +71,7 @@ class FacebookBackend:
             user = User.objects.get(username=facebook_id)
         except User.DoesNotExist:
             user = User.objects.create_user(
-                username=facebook_id,
+                name=facebook_id,
             )
         return user
         # except Exception:

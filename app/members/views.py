@@ -72,7 +72,7 @@ def facebook_login_backup(request):
     # 존재하지 않는 경우
     else:
         user = User.objects.create_user(
-            username=facebook_id,
+            name=facebook_id,
         )
 
     return render(request, 'login.html')
